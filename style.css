@@ -1,4 +1,3 @@
-/* General styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,22 +8,25 @@ body {
   font-family: Arial, sans-serif;
   color: #ffffff;
   background-color: #000000;
-  margin-right: 20px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
   padding: 10px;
+  background-color: #000000;
 }
 
 .logo {
-  color: aliceblue;
   font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
+  color: aliceblue;
+}
+
+.navbar {
+  display: flex;
 }
 
 .navbar a {
@@ -33,129 +35,120 @@ header {
   text-decoration: none;
 }
 
-.navbar a:hover, .navbar a.active {
+.navbar a:hover,
+.navbar a.active {
   color: #007bff;
 }
 
-/* Home Section */
 .home {
   height: 100vh;
-  background: url('Logo3.jpg') no-repeat;
+  background: url('Logo3.jpg') no-repeat center center;
   background-size: contain;
-  background-position: center right;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
   padding: 0 10%;
   position: relative;
 }
 
 .home-content {
   max-width: 900px;
-  padding-right: 20px;
-  z-index: 1;
 }
 
 .home-content h1 {
   font-size: 3rem;
   font-weight: 700;
+  white-space: nowrap;
   line-height: 1.2;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .home-content h3 {
-  font-size: 1.8rem;
+  font-size: 28px;
   font-weight: 700;
   color: #007bff;
-  margin: 10px 0;
+  position: relative;
 }
 
 .home-content p {
-  font-size: 1rem;
+  font-size: 16px;
   margin: 20px 0 40px;
-  color: #f0f0f0;
+  position: relative;
 }
 
-.btn-box {
+.home-content .btn-box {
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 345px;
+  height: 50px;
 }
 
 .btn-box a {
-  padding: 10px 20px;
-  color: #fff;
-  background: #007bff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.5s;
 }
 
 .btn-box a:hover {
-  background: #0056b3;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
 }
 
 .home-sci {
-  margin-top: 20px;
-  z-index: 1;
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .home-sci a {
-  color: #007bff;
-  font-size: 1.5rem;
-  margin: 0 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: 0.5s;
 }
 
 .home-sci a:hover {
-  color: #0056b3;
+  color: #081b29;
 }
 
-@media screen and (max-width: 768px) {
-  .home {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-position: center;
-  }
-
-  .home-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .home-content h3 {
-    font-size: 1.5rem;
-  }
-
-  .home-content p {
-    text-align: center;
-  }
-
-  .btn-box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-sci {
-    margin-top: 30px;
-  }
-}
-
-
-
-/* Image Hover */
 .home-imgHover {
   position: absolute;
   top: 0;
   right: 0;
-  width: 500px;
+  width: 100%;
   height: 100%;
-  background: rgba(8, 27, 41, 0.8);
-  transition: 0.3s ease-in-out;
-  pointer-events: auto;
+  background: transparent;
+  transition: 0.3s;
+  pointer-events: none;
 }
 
 .home-imgHover:hover {
@@ -163,15 +156,150 @@ header {
   opacity: 0.8;
 }
 
-/* Footer */
-footer {
-  background: #020d15;
-  color: #ffffff;
-  padding: 20px 0;
-  text-align: center;
+/* Footer Styles */
+.site-footer {
+  background-color: #252525;
+  color: #bbb;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
 }
 
-footer .footer-links a {
-  color: #ffffff;
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.site-footer a {
+  color: #bbb;
   text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer .footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.site-footer hr {
+  border-top: 1px solid #bbb;
+  margin: 20px 0;
+}
+
+.social-icons {
+  list-style: none;
+  text-align: right;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons li a {
+  background-color: #333;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  line-height: 44px;
+  height: 44px;
+  width: 44px;
+  text-align: center;
+  margin-right: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-sci {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-box a {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    margin-left: 10px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .home-sci {
+    margin-top: 20px;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
 }
