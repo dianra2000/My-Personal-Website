@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <link rel="icon" type="image/jpg" href="AR Logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex flex-col min-h-screen">
+
+    <!-- Mobile Menu Button -->
+    <div class="container mx-auto flex justify-between items-center p-4 md:hidden">
+        <button id="mobile-toggle" class="text-white focus:outline-none flex items-center">
+            <i class='bx bx-menu text-3xl'></i>
+            <p class="text-2xl ml-2">Anudi.</p>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="flex-grow flex md:flex-row flex-col">
+        <!-- Navigation Bar -->
+        <nav id="mobile-nav"
+            class="w-60 bg-gradient-to-r from-blue-900 to-black p-6 flex flex-col space-y-6 absolute md:relative top-0 left-0 h-full md:h-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out md:flex md:space-y-6">
+
+            <!-- Close Button -->
+            <button id="close-nav" class="text-white text-2xl self-end md:hidden">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <div id="typewriter" class="text-4xl text-white font-bold relative">
+                <span id="text"></span><span class="blinking-cursor">|</span>
+            </div>
+
+            <a href="index.html"
+                class="flex items-center w-full h-14 text-white px-4 py-5 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-home mr-2 text-xl'></i>Home
+            </a>
+            <a href="biography.html"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bxs-contact mr-2 text-xl'></i>Biography
+            </a>
+            <a href="index.html"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-folder mr-2 text-xl'></i>Portfolio
+            </a>
+            <a href="project.html"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-briefcase mr-2 text-xl'></i>Projects
+            </a>
+            <a href="index.html"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-folder mr-2 text-xl'></i>Education
+            </a>
+            <a href="https://medium.com/@dihanianudiranathunga"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-folder mr-2 text-xl'></i>Blogs
+            </a>
+            <a href="Gallery.html"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-briefcase mr-2 text-xl'></i>Gallery
+            </a>
+            <a href="#ContactForm"
+                class="flex items-center w-full h-14 text-white px-4 py-3 text-base transition duration-300 hover:bg-blue-500 hover:text-black">
+                <i class='bx bx-phone-call mr-2 text-xl'></i>Contact
+            </a>
+        </nav>
+        <!-- Image Section (First in Mobile, Left in Desktop) -->
+
+        <div class="md:w-[500px] w-full flex items-center justify-center p-6 order-1 md:order-none">
+            <img src="bio_image.png" alt="Profile Image"
+                class="rounded-lg shadow-lg w-[450px] h-[550px] md:h-full object-cover">
+        </div>
+
+        <!-- Biography Content (Below Image in Mobile, Right in Desktop) -->
+        <div class="md:w-2/4 w-full p-10 order-2 md:order-none">
+            <h1 class="text-4xl font-bold mb-4">Biography</h1> <br>
+            <p class="text-white text-lg text-justify md:text-left">
+                I am Anudi Ranathunga, a passionate software engineer specializing in front-end development and UI/UX
+                design.
+                With a strong foundation in coding and design, I strive to create visually appealing and user-friendly
+                applications.
+                As a <strong>Front-End Developer</strong>, I focus on crafting seamless and interactive web experiences.
+                My expertise as a <strong>Web Developer</strong> allows me to bring creative ideas to life with modern
+                technologies.
+                Being a <strong>UI/UX Enthusiast</strong>, I continuously explore innovative design principles to
+                enhance usability.<br class="pb-8"> <br>
+                As a <strong>Blogger</strong>, I love sharing insights and tutorials to help others grow in the tech
+                field.
+                My mindset as a <strong>Creative Thinker</strong> helps me approach problems with unique and effective
+                solutions.
+                I am also a <strong>TailwindCSS User</strong>, leveraging utility-first styling for responsive and
+                efficient designs.
+                My passion as a <strong>React Enthusiast</strong> drives me to build dynamic and scalable applications.
+                With a problem-solving attitude, I constantly push myself to become a better <strong>Problem
+                    Solver</strong>.
+                As a <strong>Tech Explorer</strong>, I stay up-to-date with emerging trends and tools in the
+                ever-evolving world of software development.
+            </p>
+            <br> <br>
+
+            <!-- Button -->
+            <a href="Achievments.png" id="imageButton"
+                class="relative flex items-center justify-center w-52 py-3 px-8 text-xl font-medium text-white rounded-3xl overflow-hidden transition duration-500 group border-2 border-blue-400">
+                <span
+                    class="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
+                <span class="relative z-10">Learn More</span>
+            </a>
+        </div>
+    </div>
+    <!-- Image (Initially Hidden) -->
+    <div id="imageContainer" class="hidden mt-4 flex justify-center">
+        <img src="Achievments.png" alt="Preview"
+            class="w-full max-w-lg rounded-lg shadow-lg opacity-0 transition-opacity duration-500">
+    </div>
+
+    <!-- Tailwind CSS Toggle Logic -->
+    <script>
+        document.getElementById("imageButton").addEventListener("click", function (event) {
+            event.preventDefault();
+            const image = document.getElementById("imageContainer").firstElementChild;
+            document.getElementById("imageContainer").classList.toggle("hidden");
+            setTimeout(() => image.classList.toggle("opacity-0"), 50);
+        });
+    </script>
+
+    <script>
+        const mobileToggle = document.getElementById("mobile-toggle");
+        const closeNav = document.getElementById("close-nav");
+        const mobileNav = document.getElementById("mobile-nav");
+
+        mobileToggle.addEventListener("click", () => {
+            mobileNav.classList.remove("-translate-x-full");
+        });
+
+        closeNav.addEventListener("click", () => {
+            mobileNav.classList.add("-translate-x-full");
+        });
+
+        // Typewriter Effect
+        var i = 0;
+        var text = "Anudi.";
+        var speed = 250;
+
+        function typeWriter() {
+            let textElement = document.getElementById("text");
+
+            if (i < text.length) {
+                textElement.innerHTML = text.substring(0, i + 1);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                setTimeout(clearText, 1000);
+            }
+        }
+
+        function clearText() {
+            let textElement = document.getElementById("text");
+
+            if (i > 0) {
+                textElement.innerHTML = text.substring(0, i - 1);
+                i--;
+                setTimeout(clearText, 100);
+            } else {
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        window.onload = function () {
+            typeWriter();
+        };
+    </script>
+
+    <style>
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blinking-cursor {
+            display: inline-block;
+            animation: blink 1s infinite;
+        }
+    </style>
+    <!-- footer -->
+    <footer class="bg-gradient-to-b from-black via-black to-blue-900 text-white py-10 px-10">
+        <hr class="py-4 px-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h6 class="text-xl font-bold my-4">Contact Me</h6>
+            <ul class="space-y-2">
+                <li>📞 071 263 3060</li>
+                <li>🏠 Galle, Sri Lanka</li>
+                <li>✉ dihanianudiranathunga@gmail.com</li>
+            </ul>
+            <hr class="my-6 border-gray-700">
+            <p class="text-sm">&copy; 2024 All Rights Reserved by <a href="#" class="text-blue-500">Anudi
+                    Ranathunga</a>.</p>
+        </div>
+    </footer>
+
+
+    
+</body>
+
+</html>
